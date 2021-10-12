@@ -13,11 +13,6 @@ trait Commentable
         return $this->morphMany(Comment::class, 'commentable');
     }
 
-    public function user()
-    {
-        return $this->hasOne(User::class);
-    }
-
     public function comment(string $comment): Comment
     {
         return $this->newComment(['comment' => $comment]);

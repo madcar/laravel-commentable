@@ -15,6 +15,11 @@ class Comment extends Model
         'created_at' => 'datetime:m-d-y'
     ];
 
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
     /**
      * Comment constructor.
      *
