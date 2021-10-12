@@ -3,6 +3,7 @@
 namespace Orkhanahmadov\LaravelCommentable\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use app\Models\User;
 
 class Comment extends Model
 {
