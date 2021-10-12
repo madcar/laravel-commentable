@@ -11,6 +11,10 @@ class Comment extends Model
         'comment',
     ];
 
+    protected $casts = [
+        'created_at' => 'datetime:m-d-y'
+    ];
+
     /**
      * Comment constructor.
      *

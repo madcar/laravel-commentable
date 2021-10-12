@@ -3,6 +3,7 @@
 namespace Orkhanahmadov\LaravelCommentable;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User;
 use Orkhanahmadov\LaravelCommentable\Models\Comment;
 
 trait Commentable
@@ -10,6 +11,11 @@ trait Commentable
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');
+    }
+
+    public function user()
+    {
+        return $this->hasOne(User::class);
     }
 
     public function comment(string $comment): Comment
