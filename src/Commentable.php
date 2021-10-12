@@ -27,12 +27,6 @@ trait Commentable
 
     private function newComment(array $data)
     {
-        return $this->comments()->create(array_merge(
-            $data,
-            [
-                'ip_address' => request()->ip(),
-                'user_agent' => request()->userAgent(),
-            ]
-        ));
+        return $this->comments()->create($data);
     }
 }

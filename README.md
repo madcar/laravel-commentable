@@ -15,8 +15,8 @@ This package provides adding comments to any of your existing Eloquent models.
 
 ## Requirements
 
-- PHP 7.2 or higher
-- Laravel 6 or higher
+-   PHP 7.2 or higher
+-   Laravel 6 or higher
 
 ## Installation
 
@@ -35,13 +35,14 @@ php artisan vendor:publish --provider="Orkhanahmadov\LaravelCommentable\LaravelC
 ## Config
 
 Config file contains following settings:
-- `table_name` - here you are set table name for migration. Default is "comments".
+
+-   `table_name` - here you are set table name for migration. Default is "comments".
 
 ## Usage
 
 Use `Orkhanahmadov\LaravelCommentable\Commentable` trait in any of your existing Eloquent model to make it commentable.
 
-``` php
+```php
 use Illuminate\Database\Eloquent\Model;
 use Orkhanahmadov\LaravelCommentable\Commentable;
 
@@ -53,24 +54,22 @@ class Post extends Model
 
 To add a comment to your model call `comment()` method from model instance.
 
-``` php
+```php
 $post = Post::find(1);
 $post->comment('Great post, thanks for sharing!');
 ```
 
 To add a comment as a user call `commentAs()` method from model instance.
 
-``` php
+```php
 $post = Post::find(1);
 $user = User::find(5);
 $post->commentAs($user, 'Great post, thanks for sharing!');
 ```
 
-Each comment also saves IP address, User-Agent from request.
-
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
@@ -88,8 +87,8 @@ If you discover any security related issues, please email ahmadov90@gmail.com in
 
 ## Credits
 
-- [Orkhan Ahmadov](https://github.com/orkhanahmadov)
-- [All Contributors](../../contributors)
+-   [Orkhan Ahmadov](https://github.com/orkhanahmadov)
+-   [All Contributors](../../contributors)
 
 ## License
 

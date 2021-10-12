@@ -16,8 +16,6 @@ class CreateCommentableTable extends Migration
             $table->morphs('commentable');
             $table->unsignedBigInteger('user_id')->index()->nullable();
             $table->text('comment');
-            $table->ipAddress('ip_address')->nullable();
-            $table->string('user_agent')->nullable();
             $table->timestamps();
         });
     }
